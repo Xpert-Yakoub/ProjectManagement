@@ -71,7 +71,7 @@
         <ColumnInfo Id="Description" Index="6" />
       </Columns>
     </ListView>
-    <DetailView Id="DemoTask_DetailView">
+    <DetailView Id="DemoTask_DetailView" Caption="Reception">
       <Items>
         <PropertyEditor Id="ProjectName" LookupEditorMode="AllItems" ImmediatePostData="True" />
       </Items>
@@ -114,7 +114,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="DemoTask_ListView" AllowEdit="True" NewItemRowPosition="Top">
+    <ListView Id="DemoTask_ListView" AllowEdit="True" NewItemRowPosition="Top" Caption="Reception">
       <Columns>
         <ColumnInfo Id="Subject" AllowEdit="True" SortIndex="0" SortOrder="Ascending" Width="142" />
         <ColumnInfo Id="Status" Index="1" SortIndex="-1" SortOrder="None" />
@@ -130,6 +130,7 @@
         <Filter Id="Show completed" Criteria="" IsNewNode="True" />
       </Filters>
     </ListView>
+    <ListView Id="DemoTask_LookupListView" Caption="Reception" />
     <DetailView Id="Employee_DetailView">
       <HiddenActions>
         <ActionLink ActionId="@69af7e21-57d7-4868-b3db-1ae203bd8e81" IsNewNode="True" />
@@ -224,6 +225,7 @@
         <ColumnInfo Id="Email" PropertyName="Email" Index="4" Width="86" IsNewNode="True" />
       </Columns>
     </ListView>
+    <ListView Id="Project_Tasks_ListView" Caption="Reception" />
     <ListView Id="Resume_Portfolio_ListView">
       <Columns>
         <ColumnInfo Id="Tasks" Index="-1" />

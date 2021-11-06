@@ -35,7 +35,6 @@
       <Action Id="SaveAndClose" Caption="Sauver et fermer" />
       <Action Id="SaveAndNew" Caption="Enregistrer et Nouveau" />
       <Action Id="SetFilter" Caption="Filtre" />
-      <Action Id="SetTaskAction" ShortCaption="Définir une tâche" />
       <Action Id="ShowAllContexts" ShortCaption="Valider" ToolTip="Valider le(s) objet(s) sélectionné(s) dans tous les contextes présentés" />
       <Action Id="ShowItemsOnDashboard" Caption="Afficher sur le tableau de bord" />
       <Action Id="Task.MarkCompleted" Caption="Marquer terminé" />
@@ -285,6 +284,9 @@
     </Class>
   </BOModel>
   <Localization>
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="Les modifications non enregistrées seront perdues. Voulez-vous continuer ?" />
+    </LocalizationGroup>
     <LocalizationGroup Name="Enums">
       <LocalizationGroup Name="DevExpress.Persistent.Base.General.TaskStatus">
         <LocalizationItem Name="Completed" Value="Complété" />

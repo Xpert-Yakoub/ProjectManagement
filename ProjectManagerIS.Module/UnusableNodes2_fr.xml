@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="SetTaskAction" Caption="Définir Tâche">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="Priority" Caption="Priorité">
+            <ChoiceActionItems Id="ChoiceActionItems">
+              <ChoiceActionItem Id="High" Caption="Haut" />
+              <ChoiceActionItem Id="Low" Caption="Bas" />
+            </ChoiceActionItems>
+          </ChoiceActionItem>
+          <ChoiceActionItem Id="Status" Caption="Statut">
+            <ChoiceActionItems Id="ChoiceActionItems">
+              <ChoiceActionItem Id="Canceled" Caption="Annulé" />
+              <ChoiceActionItem Id="Created" Caption="Créé" />
+              <ChoiceActionItem Id="Faulted" Caption="En défaut" />
+              <ChoiceActionItem Id="Running" Caption="En cours" />
+              <ChoiceActionItem Id="WaitingForActivation" Caption="En attente d'activation" />
+              <ChoiceActionItem Id="WaitingToRun" Caption="Attente Pour Exécuter" />
+            </ChoiceActionItems>
+          </ChoiceActionItem>
+        </ChoiceActionItems>
+      </Action>
+    </Actions>
+  </ActionDesign>
+</Application>

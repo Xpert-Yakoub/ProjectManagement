@@ -7,32 +7,12 @@
       <Action Id="CancelAction" Caption="Annuler" />
       <Action Id="DemoTask.Postpone.PostponeParametersObject" Caption="Reporter" />
       <Action Id="DialogCancel" Caption="Annuler" />
-      <Action Id="FindBySubjectAction" Caption="Rechercher une tâche par sujet" NullValuePrompt="Rechercher une tâche par sujet" />
+      <Action Id="FindBySubjectAction" Caption="Rechercher une Réceptionpar sujet" NullValuePrompt="Rechercher une tâche par sujet" />
       <Action Id="ListViewShowObject" Caption="Ouvert" />
       <Action Id="Logon" Caption="Connectez-vous" />
       <Action Id="ResetViewSettings" Caption="Réinitialiser les paramètres d'affichage" />
       <Action Id="SaveAndClose" Caption="Enregistrer et fermer" />
       <Action Id="SaveAndNew" Caption="Enregistrer et Nouveau" />
-      <Action Id="SetTaskAction" Caption="Définir Tâche">
-        <ChoiceActionItems>
-          <ChoiceActionItem Id="Priority" Caption="Priorité">
-            <ChoiceActionItems>
-              <ChoiceActionItem Id="High" Caption="Haut" />
-              <ChoiceActionItem Id="Low" Caption="Bas" />
-            </ChoiceActionItems>
-          </ChoiceActionItem>
-          <ChoiceActionItem Id="Status" Caption="Statut">
-            <ChoiceActionItems>
-              <ChoiceActionItem Id="Canceled" Caption="Annulé" />
-              <ChoiceActionItem Id="Created" Caption="Créé" />
-              <ChoiceActionItem Id="Faulted" Caption="En défaut" />
-              <ChoiceActionItem Id="Running" Caption="En cours" />
-              <ChoiceActionItem Id="WaitingForActivation" Caption="En attente d'activation" />
-              <ChoiceActionItem Id="WaitingToRun" Caption="Attente Pour Exécuter" />
-            </ChoiceActionItems>
-          </ChoiceActionItem>
-        </ChoiceActionItems>
-      </Action>
       <Action Id="ShowNotesAction" Caption="Afficher les commentaires" />
       <Action Id="Task.MarkCompleted" Caption="Marquer terminé" />
     </Actions>
@@ -199,7 +179,7 @@
       <OwnMembers>
         <Member Name="DocumentType" Caption="Type de document" />
         <Member Name="Resume" Caption="curriculum vitae" />
-        <Member Name="Tasks" Caption="Tâches" />
+        <Member Name="Tasks" Caption="Réception" />
       </OwnMembers>
     </Class>
     <Class Name="ProjectManagerIS.Module.BusinessObjects.Position" Caption="Poste">
@@ -219,7 +199,7 @@
         <Member Name="Company" Caption="Compagnie" />
         <Member Name="Exercise" Caption="Exercice" />
         <Member Name="Name" Caption="Nom" />
-        <Member Name="Tasks" Caption="Tâches" />
+        <Member Name="Tasks" Caption="Réception" />
       </OwnMembers>
     </Class>
     <Class Name="ProjectManagerIS.Module.BusinessObjects.Resume" Caption="curriculum vitae">
@@ -269,6 +249,7 @@
     <Items>
       <Item Id="Default">
         <Items>
+          <Item Id="DemoTask_ListView" Caption="Réception" />
           <Item Id="Resume_ListView" Caption="curriculum vitae" />
         </Items>
       </Item>
@@ -280,7 +261,7 @@
     </Contexts>
     <Rules>
       <RuleRequiredField Id="RuleRequiredField for Task.Project" CustomMessageTemplate="Un projet doit être spécifié" />
-      <RuleCriteria Id="TaskIsNotStarted" CustomMessageTemplate="Impossible de définir la tâche comme compléte car elle libre" />
+      <RuleCriteria Id="TaskIsNotStarted" CustomMessageTemplate="Impossible de définir la Réception comme compléte car elle libre" />
     </Rules>
   </Validation>
   <Views>
@@ -341,7 +322,7 @@
         <ColumnInfo Id="NewValue" Caption="Nouvelle valeur" />
       </Columns>
     </ListView>
-    <DetailView Id="DemoTask_DetailView">
+    <DetailView Id="DemoTask_DetailView" Caption="Réception">
       <Items>
         <PropertyEditor Id="AuditTrail" Caption="Historique des opération" />
         <PropertyEditor Id="DateCompleted" Caption="Date d'achèvement" />
@@ -355,15 +336,16 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="DemoTask_ListView">
+    <ListView Id="DemoTask_ListView" Caption="Réception">
       <Columns>
         <ColumnInfo Id="DateCompleted" Caption="Date d'achèvement" />
       </Columns>
       <Filters>
         <Filter Id="Hide Completed" Caption="Masquer les tâches terminées" />
-        <Filter Id="Show completed" Caption="Afficher les tâches complètes" />
+        <Filter Id="Show completed" Caption="Afficher les Réceptions complètes" />
       </Filters>
     </ListView>
+    <ListView Id="DemoTask_LookupListView" Caption="Réception" />
     <ListView Id="DemoTask_Portfolio_ListView">
       <Columns>
         <ColumnInfo Id="File" Caption="Fichier" />
@@ -606,7 +588,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Project_Tasks_ListView">
+    <ListView Id="Project_Tasks_ListView" Caption="Réception">
       <Columns>
         <ColumnInfo Id="DateCompleted" Caption="Date d'achèvement" />
       </Columns>
