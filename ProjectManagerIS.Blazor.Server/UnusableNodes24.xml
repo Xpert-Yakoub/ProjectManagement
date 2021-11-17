@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="MAsterDEtailDemoTAsk">
+      <Items Id="Items">
+        <DashboardViewItem Id="Detailview" ViewId="DemoTask_DetailView" />
+      </Items>
+    </DashboardView>
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col1" RelativeSize="100">
+                <LayoutItem Id="ProjectName.Company" Index="0" RelativeSize="22.377622377622377" ViewItem="ProjectName.Company" />
+                <LayoutItem Id="ProjectName" Index="1" RelativeSize="16.783216783216783" ViewItem="ProjectName" />
+                <LayoutItem Id="Subject" Index="2" RelativeSize="60.83916083916084" ViewItem="Subject" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Task">
+              <LayoutGroup Id="Task_col1">
+                <LayoutItem Id="AssignedTo" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="TaskResolution" Index="2" RelativeSize="21.428571428571427" />
+              </LayoutGroup>
+              <LayoutGroup Id="Task_col2">
+                <LayoutItem Id="DateCompleted" RelativeSize="21.428571428571427" />
+                <LayoutItem Id="DueDate" RelativeSize="50" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DemoTask_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Resolutions" Index="8" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Person">
+              <LayoutGroup Id="Auto6e9c0e4d-feaa-48f4-9cc3-497ac4cab5bc">
+                <LayoutGroup Id="Person_col2" RelativeSize="0.8849557522123894" Index="2" Caption="Person_col2" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="DemoTask_ListView" ViewId="MAsterDEtailDemoTAsk" />
+    </Items>
+  </NavigationItems>
+</Application>

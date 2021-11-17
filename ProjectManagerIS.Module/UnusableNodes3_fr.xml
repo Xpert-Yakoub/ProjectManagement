@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ProjectManagerIS.Module.BusinessObjects.DemoTask">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Portfolio" Caption="fichier" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ProjectManagerIS.Module.BusinessObjects.PortfolioFileData">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Tasks" Caption="Réception" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <ListView Id="DemoTask_Portfolio_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="File" Caption="Fichier" />
+        <ColumnInfo Id="Resume" Caption="curriculum vitae" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

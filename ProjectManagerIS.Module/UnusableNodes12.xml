@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutItem Id="Priority" Index="0" RelativeSize="51.61290322580645" />
+              <LayoutItem Id="ProjectName" Index="1" RelativeSize="48.38709677419355" />
+              <LayoutItem Id="TaskResolution" Index="1" RelativeSize="21.818181818181817" Removed="True" />
+              <LayoutItem Id="CostumTaskStatus" RelativeSize="23.880597014925375" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

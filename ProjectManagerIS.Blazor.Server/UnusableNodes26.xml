@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Subject" PropertyName="Subject" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Task">
+              <LayoutGroup Id="Task_col2" RelativeSize="49.188514357053684">
+                <LayoutItem Id="StartDate" RelativeSize="28.571428571428573" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DemoTask_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StartDate" Index="4" />
+        <ColumnInfo Id="DateCompleted" Index="5" />
+        <ColumnInfo Id="DueDate" Index="6" />
+        <ColumnInfo Id="Status" Index="7" />
+        <ColumnInfo Id="Description" Index="9" />
+      </Columns>
+    </ListView>
+  </Views>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="Task.MarkCompleted" Caption="Mark Completed" />
+    </Actions>
+  </ActionDesign>
+</Application>

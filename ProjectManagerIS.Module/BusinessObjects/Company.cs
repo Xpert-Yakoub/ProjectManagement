@@ -47,6 +47,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
         //}
 
 
+        Employee employee;
         string location;
         String companyName;
 
@@ -57,7 +58,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
         }
 
 
-        public         string Location
+        public string Location
         {
             get => location;
             set => SetPropertyValue(nameof(location), ref location, value);
@@ -69,11 +70,14 @@ namespace ProjectManagerIS.Module.BusinessObjects
         {
             get { return GetCollection<Project>(nameof(Projects)); }
         }
-        [Association("Company,Empolyees")]
-        [System.ComponentModel.DisplayName("Empolyees")]
-        public XPCollection<Employee> Empolyees
+
+
+
+        [Association("Company,Employee")]
+        public Employee Employee
         {
-            get { return GetCollection<Employee>(nameof(Empolyees)); }
+            get => employee;
+            set => SetPropertyValue(nameof(Employee), ref employee, value);
         }
 
     }

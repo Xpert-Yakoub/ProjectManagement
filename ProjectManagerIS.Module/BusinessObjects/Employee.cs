@@ -24,6 +24,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
         public Employee(Session session) : base(session) {
 
         }
+        XPCollection<Company> companies;
         Company company;
         private Employee manager;
         [DataSourceProperty("Department.Contacts", DataSourcePropertyIsNullMode.SelectAll)]
@@ -34,18 +35,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
             set { SetPropertyValue(nameof(Manager), ref manager, value); }
         }
 
-        private string nickName;
-        public string NickName
-        {
-            get { return nickName; }
-            set { SetPropertyValue(nameof(NickName), ref nickName, value); }
-        }
-        private string spouseName;
-        public string SpouseName
-        {
-            get { return spouseName; }
-            set { SetPropertyValue(nameof(SpouseName), ref spouseName, value); }
-        }
+      
         private TitleOfCourtesy titleOfCourtesy;
         public TitleOfCourtesy TitleOfCourtesy
         {
@@ -100,29 +90,26 @@ namespace ProjectManagerIS.Module.BusinessObjects
             get { return GetCollection<Resume>(nameof(Resumes)); }
         }
 
-        private ApplicationUser user;
-        public ApplicationUser User
+        //private ApplicationUser user;
+        //public ApplicationUser User
+        //{
+        //    get
+        //    {
+        //        return user;
+        //    }
+        //    set
+        //    {
+        //        SetPropertyValue<ApplicationUser>(nameof(User), ref user, value);
+        //    }
+        //}
+
+
+
+        [Association("Company,Employee")]
+        public XPCollection<Company> Companies
         {
-            get
-            {
-                return user;
-            }
-            set
-            {
-                SetPropertyValue<ApplicationUser>(nameof(User), ref user, value);
-            }
+            get { return GetCollection<Company>(nameof(Companies)); }
         }
-
-        [Association("Company,Empolyees")]
-        
-        public Company Company
-        {
-            get => company;
-            set => SetPropertyValue(nameof(Company), ref company, value);
-        }
-
-
-
 
 
 

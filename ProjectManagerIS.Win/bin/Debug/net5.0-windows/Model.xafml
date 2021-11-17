@@ -1,7 +1,92 @@
-﻿<Application Logo="ExpressAppLogo">
-	<Options UIType="TabbedMDI" FormStyle="Ribbon" />
-	<NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List"/>
-	<Options ShowTabImage="False">
-		<LayoutManagerOptions EnableLayoutGroupImages="False" />
-	</Options>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List" />
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="False">
+    <LayoutManagerOptions EnableLayoutGroupImages="False" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="21.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="21.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="DemoTask_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="26.916221033868094">
+            <LayoutGroup Id="DemoTask" RelativeSize="80.13245033112582">
+              <LayoutGroup Id="DemoTask_col1" RelativeSize="40.69767441860465">
+                <LayoutItem Id="CostumTaskStatus" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="TaskResolution" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Priority" RelativeSize="36.36363636363637" />
+              </LayoutGroup>
+              <LayoutGroup Id="DemoTask_col2" RelativeSize="59.30232558139535" Caption="DemoTask_col2">
+                <LayoutGroup Id="Auto33a0dd69-13a8-41df-8515-a1a509faedf0" RelativeSize="2.272727272727273" />
+                <LayoutGroup Id="Auto9ea3ea70-d92e-4566-9645-db7cfdf91681" RelativeSize="97.72727272727273">
+                  <LayoutGroup Id="Auto1f076400-e15b-41d7-8dad-21ae48473200" RelativeSize="48.28431372549019">
+                    <LayoutItem Id="StartDate" Index="0" RelativeSize="34.883720930232556" ViewItem="StartDate" IsNewNode="True" />
+                    <LayoutItem Id="DateCompleted" RelativeSize="27.906976744186046" Index="1" />
+                    <LayoutItem Id="CreatedOn" RelativeSize="37.2093023255814" Index="2" />
+                    <LayoutItem Id="DueDate" Removed="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autobcaf4438-678d-4405-b5f1-27caa0fa1ea5" Caption="Autobcaf4438-678d-4405-b5f1-27caa0fa1ea5(16)" RelativeSize="51.71568627450981">
+                    <LayoutItem Id="Assigned" Index="0" RelativeSize="34.883720930232556" />
+                    <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="1" RelativeSize="65.11627906976744" IsNewNode="True" Removed="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Subject" RelativeSize="19.867549668874172" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="73.0837789661319">
+            <LayoutGroup Id="Subtask" TextAlignMode="AlignWithChildren">
+              <LayoutItem Id="Subtask" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+            <LayoutGroup Id="AuditTrail" TextAlignMode="AlignWithChildren">
+              <LayoutItem Id="AuditTrail" TextAlignMode="AutoSize" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Subtask_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Subtask">
+              <LayoutGroup Id="Subtask_col1">
+                <LayoutGroup Id="Auto5c08417f-66cd-4134-af28-b1e0985f4831" RelativeSize="16.53846153846154">
+                  <LayoutGroup Id="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49" RelativeSize="49.854651162790695">
+                    <LayoutItem Id="Comptes" Index="0" RelativeSize="37.2093023255814" />
+                    <LayoutItem Id="TypeCompte" Index="1" RelativeSize="27.906976744186046" />
+                    <LayoutItem Id="Status" ViewItem="Status" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto84782a7d-fe27-4673-acb2-a06c52e22123" RelativeSize="50.145348837209305" />
+                </LayoutGroup>
+                <LayoutGroup Id="Document Informations" Index="1" RelativeSize="83.46153846153847">
+                  <LayoutGroup Id="Autoeb059426-5dfd-48ee-b4e8-e88fbe76701f" RelativeSize="42.492492492492495">
+                    <LayoutGroup Id="Auto55e19108-3ff4-4c5c-8e60-d6e4ca029406">
+                      <LayoutItem Id="Amount2" RelativeSize="7.980049875311721" />
+                      <LayoutItem Id="Amount4" RelativeSize="5.985037406483791" />
+                      <LayoutItem Id="Amount5" RelativeSize="5.985037406483791" />
+                      <LayoutItem Id="Amount3" RelativeSize="5.985037406483791" />
+                      <LayoutItem Id="Amount1" RelativeSize="5.985037406483791" />
+                      <LayoutItem Id="Amount6" RelativeSize="68.07980049875312" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto55077ddb-d8f7-48d6-9534-bd9bf9ee5c3b" RelativeSize="57.507507507507505">
+                    <LayoutGroup Id="Autod8443cd7-93f2-483e-9d93-3c4454c392cf">
+                      <LayoutItem Id="Reference" RelativeSize="7.980049875311721" />
+                      <LayoutItem Id="File" RelativeSize="5.985037406483791" />
+                      <LayoutItem Id="TierName" RelativeSize="86.0349127182045" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Status" Index="1" RelativeSize="4.074702886247878" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>

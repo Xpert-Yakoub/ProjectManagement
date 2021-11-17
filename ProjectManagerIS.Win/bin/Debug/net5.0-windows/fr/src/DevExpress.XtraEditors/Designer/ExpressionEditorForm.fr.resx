@@ -662,7 +662,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>CalculatedFieldExpressionEditorForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.XtraForm, DevExpress.Utils.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
     <value>buttonCancel</value>
@@ -671,7 +671,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
     <value>23</value>
@@ -683,7 +683,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.SimpleButton, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
     <value>24</value>
@@ -695,7 +695,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;descriptionControl.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.Utils.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.Utils.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;descriptionControl.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -707,7 +707,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;expressionEdit.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.MemoEdit, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;expressionEdit.ZOrder" xml:space="preserve">
     <value>21</value>
@@ -716,7 +716,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;functionsTypes.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.ComboBoxEdit, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;functionsTypes.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -728,7 +728,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl1.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;labelControl1.ZOrder" xml:space="preserve">
     <value>16</value>
@@ -740,7 +740,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl2.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;labelControl2.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -752,7 +752,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl3.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;labelControl3.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -764,7 +764,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;labelControl4.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;labelControl4.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -776,7 +776,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton10.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton10.ZOrder" xml:space="preserve">
     <value>11</value>
@@ -788,7 +788,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton11.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton11.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -800,7 +800,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton12.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton12.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -812,7 +812,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton13.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton13.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -824,7 +824,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton14.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton14.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -836,7 +836,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton15.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton15.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -848,7 +848,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton2.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton2.ZOrder" xml:space="preserve">
     <value>20</value>
@@ -860,7 +860,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton3.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton3.ZOrder" xml:space="preserve">
     <value>19</value>
@@ -872,7 +872,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton4.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton4.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -884,7 +884,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton5.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton5.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -896,7 +896,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton6.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton6.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -908,7 +908,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton7.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton7.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -920,7 +920,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton8.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton8.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -932,7 +932,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutItemButton9.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;layoutItemButton9.ZOrder" xml:space="preserve">
     <value>12</value>
@@ -944,7 +944,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listOfInputParameters.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ListBoxControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.ListBoxControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;listOfInputParameters.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -956,7 +956,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;listOfInputTypes.Type" xml:space="preserve">
-    <value>DevExpress.XtraEditors.ListBoxControl, DevExpress.XtraEditors.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraEditors.ListBoxControl, DevExpress.XtraEditors.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;listOfInputTypes.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -968,7 +968,7 @@ Supprime un nombre spécifié de caractères de cette instance, commençant à l
     <value>$this</value>
   </data>
   <data name="&gt;&gt;plusItemButton.Type" xml:space="preserve">
-    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v16.2, Culture = neutral</value>
+    <value>DevExpress.XtraReports.Native.LayoutItemButton, DevExpress.XtraReports.v21.1, Culture = neutral</value>
   </data>
   <data name="&gt;&gt;plusItemButton.ZOrder" xml:space="preserve">
     <value>22</value>

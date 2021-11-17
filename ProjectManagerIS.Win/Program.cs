@@ -16,6 +16,7 @@ namespace ProjectManagerIS.Win {
         /// </summary>
         [STAThread]
         static void Main() {
+
             DevExpress.ExpressApp.FrameworkSettings.DefaultSettingsCompatibilityMode = DevExpress.ExpressApp.FrameworkSettingsCompatibilityMode.Latest;
 #if EASYTEST
             DevExpress.ExpressApp.Win.EasyTest.EasyTestRemotingRegistration.Register();

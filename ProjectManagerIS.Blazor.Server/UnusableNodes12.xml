@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Table de base">
+        <Items Id="Items">
+          <Item Id="TaskStatus_ListView" ViewId="TaskStatus_ListView" />
+          <Item Id="Resolutions_ListView" ViewId="Resolutions_ListView" />
+        </Items>
+      </Item>
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="Resolutions_ListView" Removed="True" />
+          <Item Id="TaskStatus_ListView" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

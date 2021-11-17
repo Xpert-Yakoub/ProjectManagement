@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col1">
+                <LayoutItem Id="CostumTaskStatus" Removed="True" />
+                <LayoutItem Id="Priority" RelativeSize="36.36363636363637" Removed="True" />
+                <LayoutItem Id="TaskResolution" RelativeSize="27.272727272727273" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Task">
+              <LayoutGroup Id="Task_col1">
+                <LayoutItem Id="StartDate" Index="0" RelativeSize="45.714285714285715" Removed="True" />
+                <LayoutItem Id="DueDate" Removed="True" />
+                <LayoutGroup Id="Autod63e1627-dd63-498d-aaab-47bb9b26eeb2">
+                  <LayoutItem Id="DateCompleted" RelativeSize="50.379746835443036" Removed="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Task_col2">
+                <LayoutItem Id="CostumTaskStatus" Index="1" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="AssignedTo" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Subtask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Subtask">
+              <LayoutGroup Id="Subtask_col1">
+                <LayoutGroup Id="Auto5c08417f-66cd-4134-af28-b1e0985f4831">
+                  <LayoutGroup Id="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49">
+                    <LayoutItem Id="Statu" Index="1" RelativeSize="27.906976744186046" Removed="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

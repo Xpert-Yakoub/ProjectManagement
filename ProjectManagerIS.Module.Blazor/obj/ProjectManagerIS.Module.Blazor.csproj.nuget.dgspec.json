@@ -82,6 +82,10 @@
             "DevExpress.Persistent.BaseImpl": {
               "target": "Package",
               "version": "[21.1.6, )"
+            },
+            "Xpand.XAF.Core.All": {
+              "target": "Package",
+              "version": "[4.211.10, )"
             }
           },
           "imports": [
@@ -158,6 +162,10 @@
               "target": "Package",
               "version": "[21.1.6, )"
             },
+            "DevExpress.ExpressApp.FileAttachment.Win": {
+              "target": "Package",
+              "version": "[21.1.6, )"
+            },
             "DevExpress.ExpressApp.Objects": {
               "target": "Package",
               "version": "[21.1.6, )"
@@ -189,6 +197,10 @@
             "Microsoft.Azure.KeyVault": {
               "target": "Package",
               "version": "[3.0.5, )"
+            },
+            "Xpand.XAF.Core.All": {
+              "target": "Package",
+              "version": "[4.211.10, )"
             }
           },
           "imports": [

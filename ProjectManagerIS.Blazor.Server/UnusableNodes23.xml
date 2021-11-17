@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DashboardView Id="TaskSubTaskMasterDetail" Removed="True">
+      <Items Id="Items">
+        <DashboardViewItem Id="SubTask" Caption="Subtask" ViewId="Subtask_LookupListView" />
+        <DashboardViewItem Id="Task" ViewId="Task_ListView" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" ShowCaption="False" Direction="Vertical" Index="0" RelativeSize="100">
+          <LayoutItem Id="Task" Index="0" RelativeSize="38.12154696132597" ViewItem="Task" />
+          <LayoutItem Id="SubTask" Index="1" RelativeSize="61.87845303867403" ViewItem="SubTask" />
+        </LayoutGroup>
+      </Layout>
+    </DashboardView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="DemoTask_ListView" ViewId="TaskSubTaskMasterDetail" />
+    </Items>
+  </NavigationItems>
+</Application>

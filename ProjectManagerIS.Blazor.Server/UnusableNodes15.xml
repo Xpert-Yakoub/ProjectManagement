@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col2" Index="1" RelativeSize="33.95755305867665" Caption="DemoTask_col2" Removed="True">
+                <LayoutItem Id="ProjectName" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="Resolutions" Removed="True" />
+              </LayoutGroup>
+              <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="1" RelativeSize="49.81273408239701" Removed="True" />
+              <LayoutItem Id="Priority" ViewItem="Priority" Index="2" RelativeSize="24.84394506866417" Removed="True" />
+              <LayoutItem Id="Subject" Index="2" RelativeSize="12.734082397003744" Removed="True" />
+              <LayoutGroup Id="DemoTask_col1">
+                <LayoutItem Id="Priority" Index="0" RelativeSize="50" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Task">
+              <LayoutGroup Id="Task_col1">
+                <LayoutItem Id="CostumTaskStatus.Status" Index="1" RelativeSize="27.272727272727273" ViewItem="CostumTaskStatus.Status" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

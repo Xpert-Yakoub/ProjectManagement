@@ -2,9 +2,6 @@
 <Application>
   <ActionDesign>
     <Actions>
-      <Action Id="Save" Caption="sauvegarder" />
-      <Action Id="New" ShortCaption="Nouveau" ToolTip="Nouveau" />
-      <Action Id="Delete" Caption="Supprimer" />
       <Action Id="Cancel" Caption="annuler" />
       <Action Id="CancelAction" Caption="Annuler" />
       <Action Id="ChangePasswordByUser" ShortCaption="Changer mon mot de passe" ToolTip="Changer mon mot de passe" />
@@ -12,6 +9,7 @@
       <Action Id="CopyModelDifference" ShortCaption="Copier la différence de modèle" />
       <Action Id="CreateDashboard" Caption="Créer un tableau de bord" />
       <Action Id="CreateModelDifferences" ShortCaption="Créer des différences de modèle" ToolTip="Initialise les paramètres (différences de modèle) pour tous les utilisateurs." />
+      <Action Id="Delete" Caption="Supprimer" />
       <Action Id="Delete Item" Caption="Supprimer l'élément" />
       <Action Id="DeleteDashboard" Caption="Supprimer le tableau de bord" />
       <Action Id="Diagnostic Info" Caption="Diagnostique" />
@@ -26,12 +24,14 @@
       <Action Id="MyDetails" ShortCaption="Mes Details" ToolTip="Mes Details" />
       <Action Id="NavigateBack" ShortCaption="Retour" />
       <Action Id="NavigateForward" ShortCaption="Effronté" />
+      <Action Id="New" ShortCaption="Nouveau" ToolTip="Nouveau" />
       <Action Id="NextObject" ShortCaption="Enregistrement suivant" ToolTip="Enregistrement suivant" />
       <Action Id="OrganizeDashboard" Caption="Organiser le tableau de bord" />
       <Action Id="PreviousObject" ShortCaption="Enregistrement précédent" ToolTip="Enregistrement précédent" />
       <Action Id="Refresh" ShortCaption="Rafraîchir" ToolTip="Rafraîchir" />
       <Action Id="RefreshAction" ShortCaption="Rafraîchir" ToolTip="Rafraîchir" />
       <Action Id="ResetPassword" ShortCaption="réinitialiser le mot de passe" ToolTip="Générer un nouveau mot de passe pour l'utilisateur sélectionné" />
+      <Action Id="Save" Caption="sauvegarder" />
       <Action Id="SaveAndClose" Caption="Sauver et fermer" />
       <Action Id="SaveAndNew" Caption="Enregistrer et Nouveau" />
       <Action Id="SetFilter" Caption="Filtre" />
@@ -41,9 +41,9 @@
       <Action Id="Unlink" Caption="Dissocier" />
     </Actions>
     <ActionToContainerMapping>
-      <ActionContainer Id="Save" Caption="sauvegarder" />
       <ActionContainer Id="Close" Caption="Fermer" />
       <ActionContainer Id="Edit" Caption="Éditer" />
+      <ActionContainer Id="Save" Caption="sauvegarder" />
       <ActionContainer Id="Security" Caption="Sécurité" />
     </ActionToContainerMapping>
     <DisableReasons>
@@ -266,12 +266,6 @@
         <Member Name="AuditTrail" Caption="L'historique des modifications" />
       </OwnMembers>
     </Class>
-    <Class Name="ProjectManagerIS.Module.BusinessObjects.Employee">
-      <OwnMembers>
-        <Member Name="NickName" Caption="Surnom" />
-        <Member Name="SpouseName" Caption="Surnom" />
-      </OwnMembers>
-    </Class>
     <Class Name="ProjectManagerIS.Module.BusinessObjects.Exercises">
       <OwnMembers>
         <Member Name="ExerciceName" Caption="Nom de l'Exercice" />
@@ -321,7 +315,6 @@
   </Localization>
   <NavigationItems>
     <Items>
-      <Item Id="DemoTask_ListView" Caption="Tâches" />
       <Item Id="Contacts">
         <Items>
           <Item Id="Department_ListView" Caption="Départements" />
@@ -511,9 +504,9 @@
     <ListView Id="Employee_ListView" Caption="Employés">
       <Columns>
         <ColumnInfo Id="Address2" Caption="Addresse 2" />
-        <ColumnInfo Id="Anniversary" Caption="Date de marriage" />
         <ColumnInfo Id="DisplayName" Caption="Afficher Le nom" />
         <ColumnInfo Id="FullName" Caption="Nom et prénom" />
+        <ColumnInfo Id="Anniversary" Caption="Date de marriage" />
         <ColumnInfo Id="Address1" Caption="Addresse" />
       </Columns>
     </ListView>

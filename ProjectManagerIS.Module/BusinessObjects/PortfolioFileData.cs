@@ -40,12 +40,12 @@ namespace ProjectManagerIS.Module.BusinessObjects
             set { SetPropertyValue(nameof(Resume), ref resume, value); }
         }
 
-        [Association("DemoTask-PortfolioFileData")]
-        public DemoTask Tasks
-        {
-            get => tasks;
-            set => SetPropertyValue(nameof(Tasks), ref tasks, value);
-        }
+        //[Association("DemoTask-PortfolioFileData")]
+        //public DemoTask Tasks
+        //{
+        //    get => tasks;
+        //    set => SetPropertyValue(nameof(Tasks), ref tasks, value);
+        //}
 
 
         public override void AfterConstruction()

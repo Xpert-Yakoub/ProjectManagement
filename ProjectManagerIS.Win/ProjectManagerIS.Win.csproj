@@ -8,6 +8,13 @@
     <AssemblyVersion>1.0.*</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
+
+	<PropertyGroup>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	</PropertyGroup>
+	
+	
   <ItemGroup>
     <None Remove="Model.xafml" />
     <None Remove="Images\Logo.svg" />
@@ -23,6 +30,7 @@
   <ItemGroup>
     <PackageReference Include="DevExpress.ExpressApp" Version="21.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.de" Version="21.1.6" />
+    <PackageReference Include="DevExpress.ExpressApp.FileAttachment.Win" Version="21.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Security.Xpo" Version="21.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="21.1.6" />
     <PackageReference Include="DevExpress.ExpressApp.Win" Version="21.1.6" />
@@ -30,6 +38,7 @@
     <PackageReference Include="DevExpress.Persistent.Base" Version="21.1.6" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl" Version="21.1.6" />
     <PackageReference Include="DevExpress.RichEdit.Export" Version="21.1.6" />
+    <PackageReference Include="Xpand.XAF.Core.All" Version="4.211.10" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectManagerIS.Module.Win\ProjectManagerIS.Module.Win.csproj">

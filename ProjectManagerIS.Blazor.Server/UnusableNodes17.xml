@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="CostumTaskStatus" LookupProperty="Status" Removed="True" />
+        <PropertyEditor Id="CostumTaskStatus.Oid" PropertyName="CostumTaskStatus.Oid" Removed="True" />
+        <PropertyEditor Id="CostumTaskStatus.Status" PropertyName="CostumTaskStatus.Status" Removed="True" />
+        <PropertyEditor Id="Oid" Removed="True" />
+        <PropertyEditor Id="PercentCompleted" Removed="True" />
+        <PropertyEditor Id="ProjectName" Removed="True" />
+        <PropertyEditor Id="Resolutions" Removed="True" />
+        <PropertyEditor Id="Status" Removed="True" />
+        <PropertyEditor Id="Subject" Removed="True" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col2" RelativeSize="40.09661835748792" Removed="True">
+                <LayoutItem Id="Resolutions" RelativeSize="100" ViewItem="" Index="0" Removed="True" />
+                <LayoutItem Id="ProjectName" RelativeSize="47.36842105263158" Removed="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Subject" RelativeSize="24.63768115942029" Removed="True" />
+              <LayoutGroup Id="DemoTask_col1">
+                <LayoutItem Id="CostumTaskStatus" RelativeSize="22.06896551724138" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Task">
+              <LayoutGroup Id="Task_col1">
+                <LayoutItem Id="Status" Index="2" RelativeSize="13.043478260869565" Removed="True" />
+                <LayoutItem Id="CostumTaskStatus.Status" Index="3" RelativeSize="14.117647058823529" ViewItem="CostumTaskStatus.Status" Removed="True" />
+                <LayoutItem Id="Resolutions" Index="5" RelativeSize="21.91780821917808" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

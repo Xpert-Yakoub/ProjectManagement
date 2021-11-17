@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Portfolio" RelativeSize="100">
+              <LayoutItem Id="Portfolio" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Resume_Portfolio_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Tasks" Index="-1" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -1,242 +1,209 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application Title="XpertProjectManager">
-  <ActionDesign>
-    <Actions>
-      <Action Id="Save" Index="1" />
-      <Action Id="New" Index="2" />
-      <Action Id="Delete" Index="3" />
-      <Action Id="Cancel" Index="50">
-        <DisableReasons Index="50" />
-      </Action>
-      <Action Id="DemoTask.Postpone.PostponeParametersObject" TargetObjectsCriteria="[Status] &lt;&gt; ##Enum#DevExpress.Persistent.Base.General.TaskStatus,Completed#" />
-      <Action Id="Task.MarkCompleted" ValidationContexts="MarkCompleted" />
-    </Actions>
-    <ActionToContainerMapping>
-      <ActionContainer Id="Save" Index="1" />
-      <ActionContainer Id="Edit">
-        <ActionLink ActionId="Delete" Index="50" />
-      </ActionContainer>
-      <ActionContainer Id="UndoRedo">
-        <ActionLink ActionId="Cancel" Index="20" />
-      </ActionContainer>
-    </ActionToContainerMapping>
-  </ActionDesign>
+<Application>
   <BOModel>
-    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
-    <Class Name="DevExpress.Persistent.BaseImpl.Task">
-      <OwnMembers>
-        <Member Name="DueDate" DisplayFormat="D" />
-        <Member Name="StartDate" DisplayFormat="D" EditMask="d" />
-        <Member Name="Subject" RowCount="2" />
-      </OwnMembers>
+    <Class Name="ProjectManagerIS.Module.BusinessObjects.Subtask">
+      <AppearanceRules>
+        <AppearanceRule Id="AllHiden" TargetItems="Amount1,Amount2,Amount3,Amount4,Amount5,Amount6,Reference,TierName" Visibility="Hide" Criteria="[Comptes] Is Null" IsNewNode="True" />
+      </AppearanceRules>
     </Class>
-    <Class Name="ProjectManagerIS.Module.BusinessObjects.Department" ImageName="BO_Department" />
-    <Class Name="ProjectManagerIS.Module.BusinessObjects.Employee" ImageName="Employees" ObjectCaptionFormat="{0:FullName} from the {0:Department}">
-      <OwnMembers>
-        <Member Name="Position" DataSourceProperty="Department.Positions" DataSourcePropertyIsNullMode="SelectAll" />
-      </OwnMembers>
-    </Class>
-    <Class Name="ProjectManagerIS.Module.BusinessObjects.Position" ImageName="BO_Position" />
   </BOModel>
-  <NavigationItems>
-    <Items>
-      <Item Id="Default" Visible="False">
-        <Items>
-          <Item Id="Note" Caption="Notes" ImageName="BO_Note" ViewId="Note_ListView" IsNewNode="True" />
-        </Items>
-      </Item>
-    </Items>
-  </NavigationItems>
-  <Options>
-    <LayoutManagerOptions RequiredFieldMark="*" />
-  </Options>
+  <NavigationItems StartupNavigationItem="DemoTask_ListView" />
   <SchemaModules>
     <SchemaModule Name="SystemModule" Version="21.1.6.0" IsNewNode="True" />
   </SchemaModules>
-  <Validation>
-    <Rules>
-      <RuleCriteria Id="@d071c45e-32e5-4a13-a960-57313d4529c3" TargetContextIDs="Delete" Criteria="[state] = 0" TargetType="DevExpress.ExpressApp.NonPersistentBaseObject" IsNewNode="True" />
-      <RuleRequiredField Id="DevExpress.Persistent.Validation.RuleRequiredField_ProjectManagerIS.Module.BusinessObjects.Position_Title" Name="TaskNoStated" CustomMessageTemplate="Task not started can not be completed" TargetType="ProjectManagerIS.Module.BusinessObjects.DemoTask" Removed="True" />
-      <RuleCriteria Id="TaskIsNotStarted" TargetContextIDs="MarkCompleted" TargetType="ProjectManagerIS.Module.BusinessObjects.DemoTask" Criteria="[Status] &lt;&gt; ##Enum#DevExpress.Persistent.Base.General.TaskStatus,NotStarted#" CustomMessageTemplate="Cannot set the task as completed because it has not started" TargetCollectionOwnerType="" TargetCriteria="" IsNewNode="True" />
-    </Rules>
-  </Validation>
   <Views>
-    <ListView Id="ApplicationUser_ListView" Caption="Users" />
-    <DetailView Id="ChangePasswordOnLogonParameters_Blazor_DetailView" Caption="Changer le mot de passe" />
-    <ListView Id="DemoTask_AuditTrail_ListView">
+    <ListView Id="CostumResolutions_TaskStatus_ListView" PreviewColumnName="Status">
       <Columns>
-        <ColumnInfo Id="UserName" Width="142" />
-        <ColumnInfo Id="OldValue" Index="4" />
-        <ColumnInfo Id="NewValue" Index="5" />
-        <ColumnInfo Id="Description" Index="6" />
+        <ColumnInfo Id="Oid" Index="-1" />
       </Columns>
     </ListView>
-    <DetailView Id="DemoTask_DetailView" Caption="Reception">
+    <ListView Id="CostumTaskStatus_LookupListView" PreviewColumnName="" />
+    <DetailView Id="DemoTask_DetailView">
       <Items>
-        <PropertyEditor Id="ProjectName" LookupEditorMode="AllItems" ImmediatePostData="True" />
+        <PropertyEditor Id="CostumTaskStatus" PropertyName="CostumTaskStatus" IsNewNode="True" Removed="True" />
+        <PropertyEditor Id="Status" Removed="True" />
       </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="51.75438596491228">
-            <LayoutGroup Id="DemoTask" RelativeSize="60.67796610169491">
-              <LayoutItem Id="ProjectName" Index="0" RelativeSize="17.877094972067038" />
-              <LayoutItem Id="Priority" Index="1" RelativeSize="13.40782122905028" />
-              <LayoutItem Id="Resolutions" RelativeSize="13.186813186813186" Index="2" Removed="True" />
-              <LayoutItem Id="Subject" ViewItem="Subject" Index="2" RelativeSize="68.71508379888269" IsNewNode="True" />
-            </LayoutGroup>
-            <LayoutGroup Id="Task" RelativeSize="39.32203389830509">
-              <LayoutGroup Id="Task_col1" RelativeSize="49.93234100135318">
-                <LayoutItem Id="AssignedTo" RelativeSize="36.36363636363637" Index="0" />
-                <LayoutItem Id="DueDate" RelativeSize="36.36363636363637" Index="0" Removed="True" />
-                <LayoutItem Id="StartDate" RelativeSize="27.272727272727273" Index="1" Removed="True" />
-                <LayoutItem Id="Status" ViewItem="Status" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
-                <LayoutItem Id="Resolutions" ViewItem="Resolutions" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
-                <LayoutItem Id="Subject" RelativeSize="36.507936507936506" Removed="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="23.96825396825397">
+            <LayoutGroup Id="DemoTask" RelativeSize="80.13245033112582">
+              <LayoutGroup Id="DemoTask_col1" RelativeSize="31.386861313868614">
+                <LayoutItem Id="CostumTaskStatus" RelativeSize="36.36363636363637" ViewItem="CostumTaskStatus" />
+                <LayoutItem Id="TaskResolution" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="Priority" RelativeSize="36.36363636363637" />
               </LayoutGroup>
-              <LayoutGroup Id="Task_col2" ShowCaption="False" Index="1" RelativeSize="50.06765899864682" IsNewNode="True" Removed="True">
-                <LayoutItem Id="StartDate" ViewItem="StartDate" Index="0" RelativeSize="36.36363636363637" IsNewNode="True" />
-                <LayoutItem Id="DateCompleted" ViewItem="DateCompleted" Index="1" RelativeSize="27.272727272727273" IsNewNode="True" />
-                <LayoutItem Id="DueDate" ViewItem="DueDate" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
+              <LayoutGroup Id="DemoTask_col2" RelativeSize="68.61313868613139" Direction="Vertical" Caption="DemoTask_col2">
+                <LayoutGroup Id="Auto33a0dd69-13a8-41df-8515-a1a509faedf0" ShowCaption="False" Caption="Auto33a0dd69-13a8-41df-8515-a1a509faedf0(9)" Direction="Horizontal" Index="0" RelativeSize="2.272727272727273" IsNewNode="True" />
+                <LayoutGroup Id="Auto9ea3ea70-d92e-4566-9645-db7cfdf91681" ShowCaption="False" Caption="Auto9ea3ea70-d92e-4566-9645-db7cfdf91681(13)" Direction="Horizontal" Index="1" RelativeSize="97.72727272727273" IsNewNode="True">
+                  <LayoutGroup Id="Auto1f076400-e15b-41d7-8dad-21ae48473200" ShowCaption="False" Caption="Auto1f076400-e15b-41d7-8dad-21ae48473200(14)" Index="0" RelativeSize="37.234042553191486" IsNewNode="True">
+                    <LayoutItem Id="DueDate" ViewItem="DueDate" Index="0" RelativeSize="34.883720930232556" IsNewNode="True" />
+                    <LayoutItem Id="DateCompleted" ViewItem="DateCompleted" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                    <LayoutItem Id="CreatedOn" ViewItem="CreatedOn" Index="2" RelativeSize="37.2093023255814" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autobcaf4438-678d-4405-b5f1-27caa0fa1ea5" ShowCaption="False" Caption="" Index="1" RelativeSize="62.765957446808514" IsNewNode="True">
+                    <LayoutItem Id="ProjectName" ViewItem="ProjectName" Index="0" RelativeSize="34.883720930232556" IsNewNode="True" />
+                    <LayoutItem Id="Assigned" ViewItem="Assigned" Index="1" RelativeSize="65.11627906976744" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="Assigned" RelativeSize="36.36363636363637" Removed="True" />
+                <LayoutItem Id="CreatedOn" RelativeSize="36.36363636363637" Removed="True" />
+                <LayoutItem Id="ProjectName" RelativeSize="27.272727272727273" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutItem Id="Subject" ViewItem="Subject" Index="1" RelativeSize="19.867549668874172" IsNewNode="True" />
+            <LayoutGroup Id="Task" RelativeSize="32.870370370370374" Index="2" Direction="Vertical" Removed="True">
+              <LayoutGroup Id="Task_col1" RelativeSize="100">
+                <LayoutGroup Id="Autod63e1627-dd63-498d-aaab-47bb9b26eeb2" ShowCaption="False" Caption="Autod63e1627-dd63-498d-aaab-47bb9b26eeb2(11)" Direction="Vertical" Index="0" RelativeSize="100" IsNewNode="True" />
+                <LayoutItem Id="DueDate" RelativeSize="34.04255319148936" Index="0" Removed="True" />
+                <LayoutItem Id="StartDate" ViewItem="StartDate" Index="0" RelativeSize="45.714285714285715" Removed="True" />
+                <LayoutItem Id="AssignedTo" RelativeSize="17.647058823529413" Removed="True" />
+                <LayoutItem Id="Subject" RelativeSize="28.571428571428573" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Task_col2" RelativeSize="50.07299270072993" Caption="Task_col2" Removed="True">
+                <LayoutItem Id="PercentCompleted" RelativeSize="28.571428571428573" Index="0" ShowCaption="True" Removed="True" />
+                <LayoutItem Id="DateCompleted" RelativeSize="51.515151515151516" Index="1" Removed="True" />
+                <LayoutItem Id="Status" RelativeSize="28.571428571428573" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" RelativeSize="22.105263157894736">
-            <LayoutItem Id="Description" RelativeSize="100" />
-          </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="26.140350877192983">
-            <LayoutGroup Id="Portfolio" RelativeSize="100">
-              <LayoutItem Id="Portfolio" RelativeSize="100" />
+          <TabbedGroup Id="Tabs" RelativeSize="76.03174603174604" Index="1">
+            <LayoutGroup Id="Subtask" RelativeSize="100">
+              <LayoutItem Id="Subtask" RelativeSize="100" />
             </LayoutGroup>
             <LayoutGroup Id="AuditTrail" RelativeSize="100">
               <LayoutItem Id="AuditTrail" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="18.106312292358805" Caption="Description" Removed="True">
+            <LayoutItem Id="Description" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="DemoTask_ListView" AllowEdit="True" NewItemRowPosition="Top" Caption="Reception">
+    <ListView Id="DemoTask_ListView">
       <Columns>
-        <ColumnInfo Id="Subject" AllowEdit="True" SortIndex="0" SortOrder="Ascending" Width="142" />
-        <ColumnInfo Id="Status" Index="1" SortIndex="-1" SortOrder="None" />
-        <ColumnInfo Id="Priority" Index="2" />
-        <ColumnInfo Id="DueDate" Index="3" />
-        <ColumnInfo Id="ProjectName" Index="4" />
-        <ColumnInfo Id="DateCompleted" Index="5" />
-        <ColumnInfo Id="Resolutions" Index="7" />
-        <ColumnInfo Id="StartDate" Index="8" />
+        <ColumnInfo Id="CostumTaskStatus" PropertyName="CostumTaskStatus.Status" DataSourcePropertyIsNullMode="CustomCriteria" />
       </Columns>
-      <Filters CurrentFilterId="Hide Completed">
-        <Filter Id="Hide Completed" Caption="Hide Completed" Criteria="[Status] &lt;&gt; ##Enum#DevExpress.Persistent.Base.General.TaskStatus,Completed#" IsNewNode="True" />
-        <Filter Id="Show completed" Criteria="" IsNewNode="True" />
-      </Filters>
     </ListView>
-    <ListView Id="DemoTask_LookupListView" Caption="Reception" />
+    <ListView Id="DemoTask_Subtask_ListView" MasterDetailMode="ListViewAndDetailView">
+      <SplitLayout SplitterPosition="700" />
+    </ListView>
     <DetailView Id="Employee_DetailView">
-      <HiddenActions>
-        <ActionLink ActionId="@69af7e21-57d7-4868-b3db-1ae203bd8e81" IsNewNode="True" />
-      </HiddenActions>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="35.055350553505534">
-            <LayoutGroup Id="Employee" RelativeSize="50.87719298245614" Caption="Person">
-              <LayoutGroup Id="Employee_col1" RelativeSize="49.92987377279103">
-                <LayoutItem Id="FirstName" ViewItem="FirstName" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="NickName" RelativeSize="28.571428571428573" Index="0" Removed="True" />
-                <LayoutItem Id="LastName" ViewItem="LastName" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="SpouseName" RelativeSize="17.647058823529413" Index="1" Removed="True" />
-                <LayoutItem Id="FullName" ViewItem="FullName" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="Anniversary" RelativeSize="28.571428571428573" Index="3" Removed="True" />
-                <LayoutItem Id="Birthday" ViewItem="Birthday" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="TitleOfCourtesy" RelativeSize="17.647058823529413" Index="3" Removed="True" />
-                <LayoutItem Id="Manager" RelativeSize="23.529411764705884" Removed="True" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="41.82076813655761">
+            <LayoutGroup Id="Employee" RelativeSize="41.156462585034014">
+              <LayoutGroup Id="Employee_col1" RelativeSize="49.92319508448541">
+                <LayoutItem Id="Manager" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="TitleOfCourtesy" RelativeSize="21.428571428571427" Index="1" Removed="True" />
+                <LayoutItem Id="Company" ViewItem="Company" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Employee_col2" RelativeSize="50.07012622720897" Caption="Employee_col2">
-                <LayoutItem Id="Photo" ViewItem="Photo" Index="0" RelativeSize="100" IsNewNode="True" />
-                <LayoutItem Id="Position" RelativeSize="100" Index="0" Removed="True" />
-                <LayoutItem Id="Company" RelativeSize="41.1764705882353" Removed="True" />
-                <LayoutItem Id="Department" RelativeSize="23.529411764705884" Removed="True" />
-                <LayoutItem Id="User" RelativeSize="58.8235294117647" Removed="True" />
+              <LayoutGroup Id="Employee_col2" RelativeSize="50.07680491551459">
+                <LayoutItem Id="Department" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Position" RelativeSize="27.272727272727273" />
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Person" Caption="Contact and Position" RelativeSize="49.12280701754386">
-              <LayoutGroup Id="Person_col1" RelativeSize="49.92987377279103">
-                <LayoutItem Id="Email" ViewItem="Email" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="Address1" ViewItem="Address1" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="Address2" ViewItem="Address2" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="MiddleName" RelativeSize="46.666666666666664" Index="2" Removed="True" />
-                <LayoutItem Id="User" ViewItem="User" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="FirstName" RelativeSize="11.538461538461538" Index="5" Removed="True" />
-                <LayoutItem Id="LastName" RelativeSize="13.043478260869565" Index="5" Removed="True" />
+            <LayoutGroup Id="Person" RelativeSize="38.435374149659864">
+              <LayoutGroup Id="Person_col1" RelativeSize="49.92319508448541">
+                <LayoutItem Id="FirstName" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="LastName" RelativeSize="27.272727272727273" />
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="2" RelativeSize="36.36363636363637" IsNewNode="True" />
+                <LayoutItem Id="MiddleName" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Auto6e9c0e4d-feaa-48f4-9cc3-497ac4cab5bc" ShowCaption="False" Caption="Auto6e9c0e4d-feaa-48f4-9cc3-497ac4cab5bc(16)" Index="1" RelativeSize="50.07012622720897" IsNewNode="True">
-                <LayoutItem Id="Company" ViewItem="Company" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="Department" ViewItem="Department" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="Position" ViewItem="Position" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="Manager" ViewItem="Manager" Index="3" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutGroup Id="Person_col2" ShowCaption="False" Index="4" RelativeSize="7.142857142857143" IsNewNode="True" />
-              </LayoutGroup>
-              <LayoutGroup Id="Person_col2" RelativeSize="50.07012622720897" Caption="Person_col2" Removed="True">
-                <LayoutItem Id="Email" RelativeSize="100" Index="0" Removed="True" />
-                <LayoutItem Id="FullName" RelativeSize="15.384615384615385" Index="0" Removed="True" />
-                <LayoutItem Id="Birthday" RelativeSize="15.384615384615385" Removed="True" />
+              <LayoutGroup Id="Person_col2" RelativeSize="50.07680491551459">
+                <LayoutItem Id="Birthday" RelativeSize="36.36363636363637" />
+                <LayoutItem Id="Email" RelativeSize="63.63636363636363" Index="1" />
+                <LayoutItem Id="FullName" RelativeSize="27.272727272727273" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Party" RelativeSize="17.91044776119403" Caption="Party" Removed="True">
-              <LayoutItem Id="Address1" Index="0" RelativeSize="35.714285714285715" Removed="True" />
-              <LayoutItem Id="Address2" Index="0" RelativeSize="50" Removed="True" />
-              <LayoutItem Id="DisplayName" Index="0" RelativeSize="100" Removed="True" />
-              <LayoutItem Id="Photo" Removed="True" />
+            <LayoutGroup Id="Party" RelativeSize="20.408163265306122">
+              <LayoutItem Id="Photo" RelativeSize="50" />
+              <LayoutItem Id="Address1" RelativeSize="50" />
+              <LayoutItem Id="Address2" RelativeSize="35.714285714285715" Removed="True" />
+              <LayoutItem Id="DisplayName" RelativeSize="27.77777777777778" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" RelativeSize="31.857318573185733">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="32.859174964438125">
             <LayoutItem Id="Notes" RelativeSize="100" />
           </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="33.08733087330873">
-            <LayoutGroup Id="PhoneNumbers" RelativeSize="100" Index="0">
-              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="Resumes" RelativeSize="100" Index="1">
+          <TabbedGroup Id="Tabs" RelativeSize="25.320056899004268">
+            <LayoutGroup Id="Resumes" RelativeSize="100">
               <LayoutItem Id="Resumes" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="PhoneNumbers" RelativeSize="100">
+              <LayoutItem Id="PhoneNumbers" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Employee_ListView" IsGroupPanelVisible="True">
+    <DetailView Id="Subtask_DetailView">
+      <Items>
+        <PropertyEditor Id="Amount1" DisplayFormat="{0:N}" EditMask="N" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Subtask" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="Subtask_col1" RelativeSize="100" Caption="Subtask_col1" Direction="Vertical">
+                <LayoutGroup Id="Auto5c08417f-66cd-4134-af28-b1e0985f4831" ShowCaption="False" Caption="Auto5c08417f-66cd-4134-af28-b1e0985f4831(5)" Direction="Horizontal" Index="0" RelativeSize="14.601018675721562" IsNewNode="True">
+                  <LayoutGroup Id="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49" ShowCaption="False" Caption="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49(6)" Index="0" RelativeSize="49.92700729927007" IsNewNode="True">
+                    <LayoutItem Id="Comptes" ViewItem="Comptes" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                    <LayoutItem Id="TypeCompte" ViewItem="TypeCompte" Index="1" RelativeSize="62.7906976744186" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto84782a7d-fe27-4673-acb2-a06c52e22123" ShowCaption="False" Caption="Auto84782a7d-fe27-4673-acb2-a06c52e22123(10)" Index="1" RelativeSize="50.07299270072993" IsNewNode="True">
+                    <LayoutItem Id="Resolution" ViewItem="Resolution" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                    <LayoutItem Id="CreatedOn" ViewItem="CreatedOn" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                    <LayoutItem Id="EndDate" ViewItem="EndDate" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="CreatedOn" ViewItem="CreatedOn" Index="1" RelativeSize="3.6253776435045317" Removed="True" />
+                <LayoutItem Id="Status" Index="1" RelativeSize="4.074702886247878" />
+                <LayoutGroup Id="Document Informations" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="2" RelativeSize="81.32427843803056" Caption="Document Informations" IsNewNode="True">
+                  <LayoutGroup Id="Autoeb059426-5dfd-48ee-b4e8-e88fbe76701f" ShowCaption="False" Caption="Autoeb059426-5dfd-48ee-b4e8-e88fbe76701f(15)" Index="0" RelativeSize="42.68476621417798" Direction="Vertical" IsNewNode="True">
+                    <LayoutGroup Id="Auto55e19108-3ff4-4c5c-8e60-d6e4ca029406" ShowCaption="False" Caption="Auto55e19108-3ff4-4c5c-8e60-d6e4ca029406(17)" Index="0" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="Amount2" ViewItem="Amount2" Index="0" RelativeSize="7.174887892376682" IsNewNode="True" />
+                      <LayoutItem Id="Amount4" ViewItem="Amount4" Index="1" RelativeSize="5.381165919282512" IsNewNode="True" />
+                      <LayoutItem Id="Amount5" ViewItem="Amount5" Index="2" RelativeSize="5.381165919282512" IsNewNode="True" />
+                      <LayoutItem Id="Amount3" ViewItem="Amount3" Index="3" RelativeSize="5.381165919282512" IsNewNode="True" />
+                      <LayoutItem Id="Amount1" ViewItem="Amount1" Index="4" RelativeSize="5.381165919282512" IsNewNode="True" />
+                      <LayoutItem Id="Amount6" ViewItem="Amount6" Index="5" RelativeSize="71.30044843049328" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto55077ddb-d8f7-48d6-9534-bd9bf9ee5c3b" ShowCaption="False" Caption="Auto55077ddb-d8f7-48d6-9534-bd9bf9ee5c3b(22)" Index="1" RelativeSize="57.31523378582202" Direction="Vertical" IsNewNode="True">
+                    <LayoutGroup Id="Autod8443cd7-93f2-483e-9d93-3c4454c392cf" ShowCaption="False" Caption="Autod8443cd7-93f2-483e-9d93-3c4454c392cf(25)" Index="0" RelativeSize="100" IsNewNode="True">
+                      <LayoutItem Id="Reference" ViewItem="Reference" Index="0" RelativeSize="7.174887892376682" IsNewNode="True" />
+                      <LayoutItem Id="File" ViewItem="File" Index="1" RelativeSize="5.381165919282512" IsNewNode="True" />
+                      <LayoutItem Id="TierName" ViewItem="TierName" Index="2" RelativeSize="87.4439461883408" IsNewNode="True" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="EndDate" ViewItem="EndDate" Index="2" RelativeSize="3.6253776435045317" Removed="True" />
+                <LayoutItem Id="Resolution" ViewItem="Resolution" Index="2" RelativeSize="3.6253776435045317" Removed="True" />
+                <LayoutItem Id="File" RelativeSize="3.6253776435045317" Index="6" Removed="True" />
+                <LayoutItem Id="Reference" RelativeSize="3.6253776435045317" Index="7" Removed="True" />
+                <LayoutItem Id="TierName" RelativeSize="3.6253776435045317" Index="7" Removed="True" />
+                <LayoutItem Id="Amount1" Index="9" RelativeSize="3.6253776435045317" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Subtask_col2" RelativeSize="50" Caption="Subtask_col2" Removed="True">
+                <LayoutItem Id="Amount3" RelativeSize="4.833836858006042" Index="0" Removed="True" />
+                <LayoutItem Id="Comptes" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="Amount4" RelativeSize="3.6253776435045317" Index="1" Removed="True" />
+                <LayoutItem Id="Amount5" RelativeSize="3.6253776435045317" Index="2" Removed="True" />
+                <LayoutItem Id="Amount6" RelativeSize="3.6253776435045317" Index="3" Removed="True" />
+                <LayoutItem Id="Amount2" RelativeSize="4.833836858006042" Removed="True" />
+                <LayoutItem Id="TypeCompte" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TypeDoc_LookupListView">
       <Columns>
-        <ColumnInfo Id="Anniversary" Index="-1" />
-        <ColumnInfo Id="NickName" Index="-1" />
-        <ColumnInfo Id="SpouseName" Index="-1" SortIndex="-1" SortOrder="None" Width="183" />
-        <ColumnInfo Id="TitleOfCourtesy" Index="-1" SortIndex="0" SortOrder="Ascending" Width="92" />
-        <ColumnInfo Id="FullName" Width="169" SortIndex="-1" SortOrder="None" />
-        <ColumnInfo Id="Manager" Index="1" />
-        <ColumnInfo Id="Birthday" Index="2" />
-        <ColumnInfo Id="User" Index="3" />
-        <ColumnInfo Id="Position" Index="4" SortOrder="None" GroupIndex="-1" />
-        <ColumnInfo Id="Department" Index="5" SortOrder="None" GroupIndex="-1" />
+        <ColumnInfo Id="TypeCode" PropertyName="TypeCode" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="TypeName" Index="1" />
       </Columns>
     </ListView>
-    <ListView Id="Employee_LookupListView">
-      <Columns>
-        <ColumnInfo Id="FullName" Width="137" />
-        <ColumnInfo Id="Department" PropertyName="Department" Index="1" Width="110" IsNewNode="True" />
-        <ColumnInfo Id="Position" PropertyName="Position" Index="2" IsNewNode="True" />
-        <ColumnInfo Id="Manager" PropertyName="Manager" Index="3" Width="98" IsNewNode="True" />
-        <ColumnInfo Id="Email" PropertyName="Email" Index="4" Width="86" IsNewNode="True" />
-      </Columns>
-    </ListView>
-    <ListView Id="Project_Tasks_ListView" Caption="Reception" />
-    <ListView Id="Resume_Portfolio_ListView">
-      <Columns>
-        <ColumnInfo Id="Tasks" Index="-1" />
-        <ColumnInfo Id="DocumentType" Index="1" />
-      </Columns>
-    </ListView>
-    <ListView Id="Task_ListView" AllowEdit="True">
-      <Columns>
-        <ColumnInfo Id="StartDate" DisplayFormat="{0:N0}%" />
-      </Columns>
-    </ListView>
-    <ListView Id="Task_LookupListView" AllowEdit="True" NewItemRowPosition="Top" />
   </Views>
 </Application>

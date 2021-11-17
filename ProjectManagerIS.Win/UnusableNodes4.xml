@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Task" Direction="Vertical" RelativeSize="29.583333333333332" Removed="True">
+              <LayoutGroup Id="Task_col1" RelativeSize="100">
+                <LayoutGroup Id="Autod63e1627-dd63-498d-aaab-47bb9b26eeb2" Index="0" RelativeSize="100" Removed="True">
+                  <LayoutItem Id="DateCompleted" Removed="True" />
+                </LayoutGroup>
+                <LayoutItem Id="StartDate" Index="0" RelativeSize="45.714285714285715" Removed="True" />
+                <LayoutItem Id="DueDate" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Task_col2" RelativeSize="50.07299270072993" Removed="True">
+                <LayoutItem Id="CostumTaskStatus" Index="1" RelativeSize="65.95744680851064" Removed="True" />
+                <LayoutItem Id="AssignedTo" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="TaskResolution" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col2">
+                <LayoutItem Id="CreatedOn" RelativeSize="28.571428571428573" />
+                <LayoutItem Id="ProjectName" RelativeSize="63.63636363636363" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

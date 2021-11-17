@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Task_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="DateCompleted" Caption="Date de complétion" />
+      </Items>
+    </DetailView>
+    <ListView Id="Task_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DateCompleted" Caption="Date de complétion" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DemoTask_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="DateCompleted" Caption="Date de complétion" />
+      </Items>
+    </DetailView>
+    <ListView Id="DemoTask_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="DateCompleted" DisplayFormat="{0:d}" Caption="Date de complétion" />
+      </Columns>
+    </ListView>
+  </Views>
+  <BOModel Id="BOModel">
+    <Class Name="DevExpress.Persistent.BaseImpl.Task">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="AssignedTo" Caption="Assigné à" />
+        <Member Name="DateCompleted" DisplayFormat="{0:d}" Caption="Date d'achèvement" />
+        <Member Name="DueDate" Caption="Date d'échéance" />
+        <Member Name="PercentCompleted" Caption="Pourcentage terminé" />
+        <Member Name="StartDate" Caption="Date de début" />
+        <Member Name="Subject" Caption="Sujet" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ProjectManagerIS.Module.BusinessObjects.Employee">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="NickName" Caption="Surnom" />
+        <Member Name="SpouseName" Caption="Surnom" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="Task.MarkCompleted" Caption="Marquer terminé" />
+    </Actions>
+  </ActionDesign>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.Persistent.Base.General.TaskStatus">
+        <LocalizationItem Name="Completed" Value="Complété" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>

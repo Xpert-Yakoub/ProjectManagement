@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Employee_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Employee">
+              <LayoutGroup Id="Employee_col1">
+                <LayoutItem Id="SpouseName" RelativeSize="21.428571428571427" Index="1" Removed="True" />
+                <LayoutItem Id="NickName" RelativeSize="17.647058823529413" Removed="True" />
+                <LayoutItem Id="Company" ViewItem="Company" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Subtask_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Statu" PropertyName="Statu" Removed="True" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Subtask">
+              <LayoutGroup Id="Subtask_col1">
+                <LayoutItem Id="Statu" ViewItem="Statu" Index="1" RelativeSize="3.6253776435045317" Removed="True" />
+                <LayoutGroup Id="Auto5c08417f-66cd-4134-af28-b1e0985f4831">
+                  <LayoutGroup Id="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49">
+                    <LayoutItem Id="Statu" ViewItem="Statu" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

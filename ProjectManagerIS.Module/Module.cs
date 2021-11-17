@@ -17,6 +17,8 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
+//using Xpand.XAF.Modules.MasterDetail;
+
 
 namespace ProjectManagerIS.Module {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ModuleBase.
@@ -24,7 +26,8 @@ namespace ProjectManagerIS.Module {
         public ProjectManagerISModule() {
             InitializeComponent();
             AdditionalExportedTypes.Add(typeof(Note));
-
+            DevExpress.ExpressApp.Model.Core.ModelMemberReadOnlyCalculator.AllowPersistentCustomProperties = true;
+            
 
         }
         public override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {

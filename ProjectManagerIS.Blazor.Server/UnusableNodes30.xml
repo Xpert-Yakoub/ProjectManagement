@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="35.08771929824562" Caption="Description">
+            <LayoutItem Id="Description" RelativeSize="100" Index="0" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutItem Id="Subject" Index="2" RelativeSize="57.89473684210526" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Portfolio" RelativeSize="100" Index="1">
+              <LayoutItem Id="Portfolio" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DemoTask_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Resolutions" Index="8" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="User" PropertyName="User" />
+        <PropertyEditor Id="Company" PropertyName="Company" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Person">
+              <LayoutGroup Id="Auto6e9c0e4d-feaa-48f4-9cc3-497ac4cab5bc" RelativeSize="48.29467939972715">
+                <LayoutItem Id="Company" RelativeSize="28.31858407079646" Index="0" />
+                <LayoutItem Id="Department" ViewItem="Department" Index="1" RelativeSize="21.238938053097346" Removed="True" />
+                <LayoutGroup Id="Person_col2" RelativeSize="0.8849557522123894" Index="2" Caption="Person_col2" />
+                <LayoutItem Id="Position" Index="3" RelativeSize="21.238938053097346" />
+                <LayoutItem Id="Manager" Index="4" RelativeSize="28.31858407079646" />
+              </LayoutGroup>
+              <LayoutGroup Id="Person_col1">
+                <LayoutItem Id="Email" RelativeSize="28.31858407079646" />
+                <LayoutItem Id="Address1" RelativeSize="21.238938053097346" Index="1" />
+                <LayoutItem Id="Address2" Index="2" RelativeSize="21.238938053097346" />
+                <LayoutItem Id="User" Index="3" RelativeSize="29.20353982300885" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Company" Index="5" />
+        <ColumnInfo Id="User" Index="7" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

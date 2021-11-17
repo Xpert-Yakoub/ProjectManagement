@@ -5,12 +5,17 @@ using System.Linq;
 using System.Text;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Security;
+using DevExpress.Persistent.Base;
+using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.BaseImpl.PermissionPolicy;
+using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 
 namespace ProjectManagerIS.Module.BusinessObjects {
     [MapInheritance(MapInheritanceType.ParentTable)]
     [DefaultProperty(nameof(UserName))]
+    [DefaultClassOptions]
+
     public class ApplicationUser : PermissionPolicyUser, IObjectSpaceLink, ISecurityUserWithLoginInfo {
         public ApplicationUser(Session session) : base(session) { }
 
@@ -32,17 +37,30 @@ namespace ProjectManagerIS.Module.BusinessObjects {
             return result;
         }
 
-        private Employee employe;
-        public Employee Employe
+
+
+        Position position;
+        [RuleRequiredField(DefaultContexts.Save)]
+        public Position Position
         {
-            get
-            {
-                return employe;
-            }
-            set
-            {
-                SetPropertyValue<Employee>(nameof(Employe), ref employe, value);
-            }
+            get => position;
+            set => SetPropertyValue(nameof(Position), ref position, value);
         }
+
+
+
+
+        //private Employee employe;
+        //public Employee Employe
+        //{
+        //    get
+        //    {
+        //        return employe;
+        //    }
+        //    set
+        //    {
+        //        SetPropertyValue<Employee>(nameof(Employe), ref employe, value);
+        //    }
+        //}
     }
 }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Win">
+        <Items Id="Items">
+          <Item Id="DemoTask_ListView" Caption="Réception" />
+          <Item Id="Resume_ListView" Caption="curriculum vitae" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

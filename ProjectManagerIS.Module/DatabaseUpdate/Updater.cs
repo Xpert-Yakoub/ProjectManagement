@@ -21,6 +21,8 @@ namespace ProjectManagerIS.Module.DatabaseUpdate {
         }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
+
+
             //string name = "MyName";
             //DomainObject1 theObject = ObjectSpace.FirstOrDefault<DomainObject1>(u => u.Name == name);
             //if(theObject == null) {
@@ -62,6 +64,11 @@ namespace ProjectManagerIS.Module.DatabaseUpdate {
             }
             adminRole.IsAdministrative = true;
 			userAdmin.Roles.Add(adminRole);
+
+
+
+
+
             ObjectSpace.CommitChanges(); //This line persists created object(s).
         }
         public override void UpdateDatabaseBeforeUpdateSchema() {

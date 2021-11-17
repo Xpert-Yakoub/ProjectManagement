@@ -1,6 +1,8 @@
 ﻿using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
+using DevExpress.ExpressApp.Blazor.Editors;
+using DevExpress.ExpressApp.Blazor.Editors.Adapters;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.Layout;
@@ -14,6 +16,7 @@ using DevExpress.Xpo;
 using ProjectManagerIS.Module.BusinessObjects;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
@@ -36,12 +39,28 @@ namespace ProjectManagerIS.Module.Controllers
             base.OnActivated();
             // Perform various tasks depending on the target View.
             ObjectSpace.ObjectChanged += ObjectSpace_ObjectChanged;
+            ObjectSpace.Committing += ObjectSpace_Objectcom;
+            ObjectSpace.ObjectSaving += ObjectSpace_ObjectSaving;
 
+        }
 
+        private void ObjectSpace_ObjectSaving(object sender, ObjectManipulatingEventArgs e)
+        {
+            //throw new NotImplementedException();
 
 
 
         }
+
+
+
+
+
+        private void ObjectSpace_Objectcom(object sender, CancelEventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
 
         
 
@@ -62,13 +81,13 @@ namespace ProjectManagerIS.Module.Controllers
 
 
             if (View.CurrentObject == e.Object &&
-                e.PropertyName == "AssignedTo" &&
+                e.PropertyName == "CostumTaskStatus" &&
                 ObjectSpace.IsModified &&
                 e.OldValue != e.NewValue){
                 DemoTask TaskChanged = (DemoTask)e.Object;
-                    if (TaskChanged.AssignedTo != null)
+                    if (TaskChanged.CostumTaskStatus != null)
                         {
-                    TaskChanged.Description += "La tache a été assigné a " + TaskChanged.AssignedTo + " le " + DateTime.Now + "\n";
+                            TaskChanged.TaskResolution = null; 
                         }
             
                 }
