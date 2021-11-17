@@ -156,7 +156,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
 
 
 
-        
+        [ImmediatePostData]
         public DocComptes Comptes
         {
             get => comptes;
@@ -165,7 +165,7 @@ namespace ProjectManagerIS.Module.BusinessObjects
 
 
 
-        [DataSourceProperty("Comptes.TypeDoc",DataSourcePropertyIsNullMode.SelectAll)]
+        [DataSourceProperty("Comptes.TypeDoc",DataSourcePropertyIsNullMode.SelectNothing)]
         public TypeDoc TypeCompte
         {
             get => typeCompte;

@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="ProjectManagerIS.Module.BusinessObjects.Subtask">
+      <AppearanceRules>
+        <AppearanceRule Id="HideForCLassAchat" Criteria="[Comptes.TypeName] = 'Class Achat'" Visibility="Hide" Priority="1" TargetItems="Amount1,Amount2" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+  </BOModel>
   <NavigationItems NavigationStyle="Accordion" ShowImages="False" DefaultChildItemsDisplayStyle="List" />
   <Options UIType="TabbedMDI" FormStyle="Ribbon" ShowTabImage="False">
     <LayoutManagerOptions EnableLayoutGroupImages="False" />
@@ -26,7 +33,6 @@
                     <LayoutItem Id="StartDate" Index="0" RelativeSize="34.883720930232556" ViewItem="StartDate" IsNewNode="True" />
                     <LayoutItem Id="DateCompleted" RelativeSize="27.906976744186046" Index="1" />
                     <LayoutItem Id="CreatedOn" RelativeSize="37.2093023255814" Index="2" />
-                    <LayoutItem Id="DueDate" Removed="True" />
                   </LayoutGroup>
                   <LayoutGroup Id="Autobcaf4438-678d-4405-b5f1-27caa0fa1ea5" Caption="Autobcaf4438-678d-4405-b5f1-27caa0fa1ea5(16)" RelativeSize="51.71568627450981">
                     <LayoutItem Id="Assigned" Index="0" RelativeSize="34.883720930232556" />
@@ -58,7 +64,7 @@
                   <LayoutGroup Id="Autocc79ad22-e5a5-4bd0-b43b-19dde1430f49" RelativeSize="49.854651162790695">
                     <LayoutItem Id="Comptes" Index="0" RelativeSize="37.2093023255814" />
                     <LayoutItem Id="TypeCompte" Index="1" RelativeSize="27.906976744186046" />
-                    <LayoutItem Id="Status" ViewItem="Status" Index="2" RelativeSize="34.883720930232556" IsNewNode="True" />
+                    <LayoutItem Id="Status" Index="2" RelativeSize="34.883720930232556" ViewItem="Status" IsNewNode="True" />
                   </LayoutGroup>
                   <LayoutGroup Id="Auto84782a7d-fe27-4673-acb2-a06c52e22123" RelativeSize="50.145348837209305" />
                 </LayoutGroup>
@@ -81,7 +87,6 @@
                     </LayoutGroup>
                   </LayoutGroup>
                 </LayoutGroup>
-                <LayoutItem Id="Status" Index="1" RelativeSize="4.074702886247878" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>

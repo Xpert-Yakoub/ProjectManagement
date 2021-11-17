@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="DemoTask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DemoTask">
+              <LayoutGroup Id="DemoTask_col2">
+                <LayoutGroup Id="Auto9ea3ea70-d92e-4566-9645-db7cfdf91681">
+                  <LayoutGroup Id="Auto1f076400-e15b-41d7-8dad-21ae48473200">
+                    <LayoutItem Id="DueDate" Removed="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Subtask_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Subtask">
+              <LayoutGroup Id="Subtask_col1">
+                <LayoutItem Id="Status" Index="1" RelativeSize="4.074702886247878" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
